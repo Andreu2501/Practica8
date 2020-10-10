@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  #servicio web xampp
+  #servicio distribuidor de apache xampp
   web: 
     build: .
     image: mi-xampp:1.0
@@ -20,8 +20,24 @@ services:
       MYSQL_ROOT_PASSWORD: hello1234
     volumes:
       - xampp-data:/var/lib/mysql
-
+  #tercer servicio BD postgres
+  db1:
+    image: postgres
+    restart: always
+    ports:
+      - 5050:5050
+    environment:
+      POSTGRES_DB: Practica9
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - db-data1:/var/lib/postgresql/data
+  
+#volumenes
 volumes:
   xampp-data:
     driver: local
+  db-data1:
+    driver: local
+
     
