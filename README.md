@@ -11,14 +11,14 @@
 * github
 
 ## Ejecucion
-1 Levantamos el docker compose
+1. Levantamos el docker compose
 * docker-compose up -d --build
-2 verificamos que los contenedores que se tienen
+2. verificamos que los contenedores que se tienen
 * docker ps
-3 entramos al puerto 81 de la maquina para ver nuestra servidor web
-4 entramos a la consola del tercer servicio que es la base de datos Postgres 
+3. entramos al puerto 81 de la maquina para ver nuestra servidor web
+4. entramos a la consola del tercer servicio que es la base de datos Postgres 
 * docker exec -it 8f2957849f0f  psql -U postgres  -W postgres
-5 bajamos el docker compose
+5. bajamos el docker compose
 * docker-compose down
 
 ## Autor
